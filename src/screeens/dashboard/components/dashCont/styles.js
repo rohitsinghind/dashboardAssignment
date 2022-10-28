@@ -1,21 +1,50 @@
 export const styles = {
     box:{
-        flex:1
+        flex:1,
+    },
+    mBox:{
+        flex:1,
+        '@media (max-width: 499px)': {
+           display:"none"
+          },
     },
     boxL:{
         // background:"red",
-        width:"75%"
+        width:"75%",
+        '@media (max-width: 1220px)': {
+            width:"50%",
+            '@media (max-width: 825px)': {
+                width:"100%",
+              },
+          },
     },
     boxR:{
-        width:"25%"
+        width:"30%",
+        '@media (max-width: 1220px)': {
+            width:"50%",
+            '@media (max-width: 825px)': {
+                width:"100%",
+              },
+          },
     },
     box2:{
         display:"flex",
-        p:4
+        p:4,
+        '@media (max-width: 825px)': {
+            flexDirection:"column-reverse",
+            p:2,
+          },
     },
     box3:{
         display:"flex",
         justifyContent:"space-between",
+    },
+    box4:{
+        display:"flex",
+        justifyContent:"space-between",
+        '@media (max-width: 1220px)': {
+            flexDirection:"column"
+          },
     },
     paper1:{
         p:2, 
@@ -24,6 +53,9 @@ export const styles = {
         display:"flex",
         width:"29%",
         justifyContent:"space-between",
+        '@media (max-width: 1220px)': {
+            width:"92%",
+          },
     },
     paper2:{
         p:2, 
@@ -31,6 +63,10 @@ export const styles = {
         my:3,
         display:"flex",
         justifyContent:"space-between",
+        '@media (max-width: 1220px)': {
+            flexDirection:"column",
+            width:"92%"
+          },
     },
     paper3:{
         display:"flex",
@@ -52,7 +88,10 @@ export const styles = {
         p:2,
         borderRadius:3,
         minWidth:200,
-        width:"29%"
+        width:"29%",
+        '@media (max-width: 1565px)': {
+            width:"92%",
+          },
     },
     grid2:{
         display: "grid",

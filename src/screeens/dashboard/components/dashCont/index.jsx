@@ -16,13 +16,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 
-export default function DashCont() {
+export default function DashCont({show, setShow}) {
   return (
-        <Box sx={styles.box}>
-          <Navbar/>
+        <Box sx={show?styles.mBox:styles.box}>
+          <Navbar show={show} setShow={setShow}/>
           <Box sx={styles.box2}>
           <Box sx={styles.boxL}>
-            <Box sx={styles.box3}>
+            <Box sx={styles.box4}>
               <Paper variant="outlined" sx={styles.paper1}>
               <Stack direction="row" spacing={2}>
                 <Button variant="contained" sx={{height:40, width: 30}} startIcon={<PieChartIcon />}/>
@@ -108,7 +108,7 @@ export default function DashCont() {
                 </Box>
             </Paper>
 
-            <Box sx={{display:"flex" ,justifyContent:"space-between"}}>
+            <Box sx={styles.box4}>
 
             <Paper variant="outlined" sx={styles.paper4}>
               <Box sx={styles.box3}>

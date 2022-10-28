@@ -26,7 +26,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 import SubjectIcon from '@mui/icons-material/Subject';
 
-export default function DashNav() {
+export default function DashNav({show, setShow}) {
 
   const darkTheme = createTheme({
     palette: {
@@ -56,9 +56,9 @@ export default function DashNav() {
 
 
   return (
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider sx={styles.sideNav} theme={darkTheme}>
           <List
-      sx={{ width: '100%', maxWidth: 300, bgcolor: '#010423', color:"#a0a0a0" }}
+      sx={styles.sideNav}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
@@ -67,7 +67,7 @@ export default function DashNav() {
           {/* <GridViewIcon /> */}
         </ListItemIcon>
         <ListItemText primaryTypographyProps={{color:"#a0a0a0"}} primary="" />
-        <SubjectIcon sx={{ color:"#a0a0a0" }}/>
+        <SubjectIcon onClick={()=>setShow(!show)} sx={{ color:"#a0a0a0" }}/>
       </ListItemButton>
       }
     >

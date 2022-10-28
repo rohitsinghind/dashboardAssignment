@@ -12,7 +12,7 @@ import Avatar from '@mui/material/Avatar';
 export default function Profile() {
   return (
     <>
-     <Paper variant="outlined" sx={{ ml:3,borderRadius:3,  display:"flex",flexDirection:"column",alignItems:"center", position:"relative", height:"100%"}}>
+     <Paper variant="outlined" sx={{ ml:3,borderRadius:3,  display:"flex",flexDirection:"column",alignItems:"center", position:"relative", height:"100%",'@media (max-width: 825px)': {ml:0,mb:3,pb:2}}}>
       <CardMedia
         component="img"
         height="140"
@@ -23,7 +23,7 @@ export default function Profile() {
       <Avatar sx={{height:90, width:90, border:"7px solid white", position:"absolute", top:"90px"}} alt="Remy Sharp" src={require("../../../../../assets/profile.jpg")} />
       <Typography sx={{fontSize: 16, fontWeight:"bold", mt:"65px"}}>Jennifer Bennett</Typography>
       <Typography sx={{color:"gray",fontSize: 15}}>Product Designer</Typography>
-      <Stack direction="row" spacing={10} sx={{my:3}}>
+      <Stack direction="row" spacing={10} sx={{m:3}}>
         <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",}}>
           <Typography sx={{fontSize: 16, fontWeight:"bold"}}>1,269</Typography>
           <Typography sx={{color:"gray",fontSize: 15}}>Products</Typography>
@@ -47,7 +47,7 @@ export default function Profile() {
       <Typography sx={{fontSize: 20, fontWeight:"bold"}}>$26,256</Typography>
       <Typography sx={{color:"gray",fontSize: 15}}>Earning this Month</Typography>
 
-      <Stack direction="row" spacing={2} sx={{my:2}}>
+      <Stack direction="row" spacing={2} sx={{m:2}}>
       <Typography sx={{fontSize: 15, color:"#689c75", background:"#edfaf0", borderRadius:4, alignSelf:"flex-end",px:1}}>+2.65%</Typography>
       <Typography sx={{color:"gray",fontSize: 15}}>From Previous Period</Typography>
       </Stack>
